@@ -1,0 +1,42 @@
+<h1>Instructions</h1>
+<p>
+	In order to use this tool, you need to load in staff information. This information is compiled as a CSV File
+	under each quota embed found in the parse history channel. 
+	Copy the contents in each <b>currentweekResetData.csv</b> file and paste them in the textbox below <b>on a new line.</b> Once done, press the <b>Load Staff</b> button.
+	<br><br>
+	If you want to use the pub halls configuration, please select this checkbox:
+	<input type="checkbox" id="json" onclick="load()">
+	<br><br>
+	If you want to switch the date to use the past week, then please select the checkbox:
+	<input type="checkbox" id="weekCheckbox" onclick="load()">
+	<br><br>
+	If you use the date format <b>yyyy-dd-mm</b> then please select the checkbox:
+	<input type="checkbox" id="check" onclick="load()">
+	<br><br>
+	Please use the following search query to load every CSV file within the month:
+	<br> 
+	<center>
+		<code id="parsesQuery"></code>
+	</center>
+	<br>
+	Please use the following search query to get total runs during the month:
+	<br>
+	<center>
+		<code id="rsa"></code>
+	</center>
+	<br>
+	If there are missing staff, you can add them by using the text box using this format:
+	<br>
+	<center>
+	<b>Leader ID,Leader Nickname,Currentweek Total,Total</b>
+	<br>
+	<label>i.e.</label>
+	<code>392908116448116736,ඞSu | Lag,0,0</code>
+	<br><br>
+	<textarea id="parsesTextArea" name="lname"></textarea>
+	<br>
+	<button onclick="parseCSV(document)">Load Staff</button>
+	<div id="tab" class="tab" style="display: none;"></div>
+	<div id="tabcontent"></div>		
+	</center>
+</p>
